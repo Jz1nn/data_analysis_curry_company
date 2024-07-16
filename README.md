@@ -92,7 +92,7 @@ O painel estratégico foi desenvolvido utilizando as métricas que refletem as 3
 
 Painel online, hospedado em um Cloud e disponível para acesso em qualquer dispositivo conectado à internet.
 
-O painel pode ser acessado através desse link: https://johnwln-curry-company.streamlit.app/
+O painel pode ser acessado através desse link: [Dashboard Curry_Company](https://johnwln-curry-company.streamlit.app/)
 
 # 6. Conclusão
 
