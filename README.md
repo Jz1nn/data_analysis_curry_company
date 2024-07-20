@@ -1,3 +1,5 @@
+O painel pode ser acessado através desse link: [Dashboard Curry_Company](https://johnwln-curry-company.streamlit.app/)
+
 # 1. Problema de negócio
 
 A Cury Company é uma empresa de tecnologia que criou um aplicativo que conecta restaurantes, entregadores e pessoas.
@@ -91,8 +93,6 @@ O painel estratégico foi desenvolvido utilizando as métricas que refletem as 3
 # 5. O produto final do projeto
 
 Painel online, hospedado em um Cloud e disponível para acesso em qualquer dispositivo conectado à internet.
-
-O painel pode ser acessado através desse link: [Dashboard Curry_Company](https://johnwln-curry-company.streamlit.app/)
 
 # 6. Conclusão
 
