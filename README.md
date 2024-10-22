@@ -1,107 +1,107 @@
-# 1. Problema de negócio
+# 1. Business problem
 
-A Cury Company é uma empresa de tecnologia que criou um aplicativo que conecta restaurantes, entregadores e pessoas.
+Cury Company is a technology company that created an app that connects restaurants, delivery people and people.
 
-Através desse aplicativo, é possível realizar o pedido de uma refeição, em qualquer restaurante cadastrado, e recebê-lo no conforto da sua casa por um entregador também cadastrado no aplicativo da Cury Company.
+Through this app, you can order a meal from any registered restaurant and have it delivered to the comfort of your home by a delivery person also registered in the Cury Company app.
 
-A empresa realiza negócios entre restaurantes, entregadores e pessoas, e gera muitos dados sobre entregas, tipos de pedidos, condições climáticas, avaliação dos entregadores e etc. Apesar da entrega estar crescendo, em termos de entregas, o CEO não tem visibilidade completa dos KPIs de crescimento da empresa.
+The company does business between restaurants, delivery people and people, and generates a lot of data about deliveries, types of orders, weather conditions, delivery people's ratings, etc. Although delivery is growing, in terms of deliveries, the CEO does not have complete visibility of the company's growth KPIs.
 
-Você foi contratado como um Cientista de Dados para criar soluções de dados para entrega, mas antes de treinar algoritmos, a necessidade da empresa é ter um os principais KPIs estratégicos organizados em uma única ferramenta, para que o CEO possa consultar e conseguir tomar decisões simples, porém importantes.
+You were hired as a Data Scientist to create data solutions for delivery, but before training algorithms, the company needs to have the main strategic KPIs organized in a single tool, so that the CEO can consult and make simple but important decisions.
 
-A Cury Company possui um modelo de negócio chamado Marketplace, que fazer o intermédio do negócio entre três clientes principais: Restaurantes, entregadores e pessoas compradoras. Para acompanhar o crescimento desses negócios, o CEO gostaria de ver as seguintes métricas de crescimento:
+Cury Company has a business model called Marketplace, which acts as an intermediary between three main customers: Restaurants, delivery people and buyers. To track the growth of these businesses, the CEO would like to see the following growth metrics:
 
-## Do lado da empresa:
+## On the company side:
 
-1. Quantidade de pedidos por dia.
-2. Quantidade de pedidos por semana.
-3. Distribuição dos pedidos por tipo de tráfego.
-4. Comparação do volume de pedidos por cidade e tipo de tráfego.
-4. A quantidade de pedidos por entregador por semana.
-5. A localização central de cada cidade por tipo de tráfego.
+1. Number of orders per day.
+2. Number of orders per week.
+3. Distribution of orders by traffic type.
+4. Comparison of order volume by city and traffic type.
+4. Number of orders per delivery person per week.
+5. Central location of each city by traffic type.
 
-## Do lado do entregador:
+## On the delivery person side:
 
-1. A menor e maior idade dos entregadores.
-2. A pior e a melhor condição de veículos.
-3. A avaliação média por entregador.
-4. A avaliação média e o desvio padrão por tipo de tráfego.
-5. A avaliação média e o desvio padrão por condições climáticas.
-6. Os 10 entregadores mais rápidos por cidade.
-7. Os 10 entregadores mais lentos por cidade.
+1. Youngest and oldest age of delivery people.
+2. Worst and best condition of vehicles.
+3. Average rating per delivery person.
+4. Average rating and standard deviation by traffic type.
+5. Average rating and standard deviation by weather conditions.
+6. Top 10 fastest delivery people by city.
+7. Top 10 slowest delivery people by city.
 
-## Do lado do restaurantes:
+## On the restaurant side:
 
-1. A quantidade de entregadores únicos.
-2. A distância média dos restaurantes e dos locais de entrega.
-3. O tempo médio e o desvio padrão de entrega por cidade.
-4. O tempo médio e o desvio padrão de entrega por cidade e tipo de pedido.
-5. O tempo médio e o desvio padrão de entrega por cidade e tipo de tráfego.
-6. O tempo médio de entrega durantes os Festivais.
+1. Number of unique delivery people.
+2. Average distance between restaurants and delivery locations.
+3. Average delivery time and standard deviation by city.
+4. Average delivery time and standard deviation by city and order type.
+5. Average delivery time and standard deviation by city and traffic type.
+6. Average delivery time during festivals.
 
-O objetivo desse projeto é criar um conjunto de gráficos e/ou tabelas que exibam essas métricas da melhor forma possível para o CEO.
+The goal of this project is to create a set of graphs and/or tables that display these metrics in the best possible way for the CEO.
 
-# 2. Premissas assumidas para a análise
+# 2. Assumptions assumed for the analysis
 
-1. A análise foi realizada com dados entre 11/02/2022 e 06/04/2022.
-2. Marketplace foi o modelo de negócio assumido.
-3. Os 3 principais visões do negócio foram: Visão transação de pedidos, visão restaurante e visão entregadores.
+1. The analysis was performed with data between 02/11/2022 and 04/06/2022.
+2. Marketplace was the assumed business model.
+3. The 3 main business views were: Order transaction view, restaurant view, and delivery person view.
 
-# 3. Estratégia da solução
+# 3. Solution Strategy
 
-O painel estratégico foi desenvolvido utilizando as métricas que refletem as 3 principais visões do modelo de negócio da empresa:
+The strategic dashboard was developed using metrics that reflect the 3 main views of the company's business model:
 
-1. Visão do crescimento da empresa
-2. Visão do crescimento dos restaurantes
-3. Visão do crescimento dos entregadores
+1. Company growth view
+2. Restaurant growth view
+3. Delivery driver growth view
 
-### Cada visão é representada pelo seguinte conjunto de métricas.
+### Each view is represented by the following set of metrics.
 
-1. Visão do crescimento da empresa
- - a. Pedidos por dia
- - b. Porcentagem de pedidos por condições de trânsito
- - c. Quantidade de pedidos por tipo e por cidade.
- - d. Pedidos por semana
- - e. Quantidade de pedidos por tipo de entrega
- - f. Quantidade de pedidos por condições de trânsito e tipo de cidade
+1. Company growth view
+- a. Orders per day
+- b. Percentage of orders by traffic conditions
+- c. Number of orders by type and city.
+- d. Orders per week
+- e. Number of orders by delivery type
+- f. Number of orders by traffic conditions and city type
 
-2. Visão do crescimento dos restaurantes
- - a. Quantidade de pedidos únicos.
- - b. Distância média percorrida.
- - c. Tempo médio de entrega durante festival e dias normais.
- - d. Desvio padrão do tempo de entrega durante festivais e dias normais.
- - e. Tempo de entrega médio por cidade.
- - f. Distribuição do tempo médio de entrega por cidade.
- - g. Tempo médio de entrega por tipo de pedido.
+2. Restaurant growth view
+- a. Number of unique orders.
+- b. Average distance traveled.
+- c. Average delivery time during festival and normal days.
+- d. Standard deviation of delivery time during festival and normal days.
+- e. Average delivery time by city.
+- f. Distribution of average delivery time by city.
+- g. Average delivery time by order type.
 
-3. Visão do crescimento dos entregadores
- - a. Idade do entregador mais velho e do mais novo.
- - b. Avaliação do melhor e do pior veículo.
- - c. Avaliação média por entregador.
- - d. Avaliação média por condições de trânsito.
- - e. Avaliação média por condições climáticas.
- - f. Tempo médio do entregador mais rápido.
- - g. Tempo médio do entregador mais rápido por cidade.
+3. Insight into delivery driver growth
+- a. Age of oldest and youngest delivery driver.
+- b. Rating of best and worst vehicle.
+- c. Average rating per delivery driver.
+- d. Average rating by traffic conditions.
+- e. Average rating by weather conditions.
+- f. Average time of fastest delivery driver.
+- g. Average time of fastest delivery driver by city.
 
-# 4. Top 3 Insights de dados
+# 4. Top 3 Data Insights
 
-  1. A sazonalidade da quantidade de pedidos é diária. Há uma variação de aproximadamente 10% do número de pedidos em dia sequenciais.
-  2. As cidades do tipo Semi-Urban não possuem condições baixas de trânsito.
-  3. As maiores variações no tempo de entrega, acontecem durante o clima ensolarado.
+1. The seasonality of the order quantity is daily. There is a variation of approximately 10% in the number of orders on consecutive days.
+2. Semi-Urban cities do not have low traffic conditions.
+3. The greatest variations in delivery time occur during sunny weather.
 
-# 5. O produto final do projeto
+# 5. The final product of the project
 
-Painel online, hospedado em um Cloud e disponível para acesso em qualquer dispositivo conectado à internet.
+Online dashboard, hosted in a Cloud and available for access on any device connected to the internet.
 
-O painel pode ser acessado através desse link: https://johnwln-curry-company.streamlit.app/
+The dashboard can be accessed through this link: https://johnwln-curry-company.streamlit.app/
 
-# 6. Conclusão
+# 6. Conclusion
 
-O objetivo desse projeto é criar um conjunto de gráficos e/ou tabelas que exibam essas métricas da melhor forma possível para o CEO.
+The objective of this project is to create a set of graphs and/or tables that display these metrics in the best possible way for the CEO.
 
-Da visão da Empresa, podemos concluir que o número de pedidos cresceu entre a semana 06 e a semana 13 do ano de 2022.
+From the Company's perspective, we can conclude that the number of orders grew between week 06 and week 13 of the year 2022.
 
-# 7. Próximo passos
+# 7. Next steps
 
-  1. Reduzir o número de métricas.
-  2. Criar novos filtros.
-  3. Adicionar novas visões de negócio.
+1. Reduce the number of metrics.
+2. Create new filters.
+3. Add new business views.
